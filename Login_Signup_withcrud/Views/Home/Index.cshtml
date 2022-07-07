@@ -1,0 +1,42 @@
+﻿@model List<Login_Signup_withcrud.Models.ahmad>
+@{
+    ViewBag.Title = "Home Page";
+}
+<h2>********table data********</h2>
+<table class="table table-bordered table-hover table-responsive">
+    <tr>
+        <th class="bg-success">id</th>
+        <th class="bg-success">Fname</th>
+        <th class="bg-success">Lname</th>
+        <th class="bg-success">age</th>
+        <th class="bg-success">gender</th>
+        <th class="bg-success">gamil</th>
+        <th class="bg-success">username</th>
+        <th class="bg-success">password</th>
+        <th class="bg-success"></th>
+        <th class="bg-success"></th>
+        <th class="bg-success"></th>
+
+
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.id</td>
+    <td>@item.Fname</td>
+    <td>@item.Lname</td>
+    <td>@item.age</td>
+    <td>@item.gender</td>
+    <td>@item.gmail</td>
+    <td>@item.username</td>
+    <td>@item.password</td>
+    <td><a class="btn btn-danger" href="@Url.Action("delete","home",new {id=item.id })">DELETE</a></td>
+    <td><a class="btn btn-warning" href="@Url.Action("details","home",new {id=item.id })">DETAILS</a></td>
+    <td><a class="btn btn-success" href="@Url.Action("edit","home",new {id=item.id })">EDIT</a></td>
+
+
+</tr>
+    }
+</table>
+
+

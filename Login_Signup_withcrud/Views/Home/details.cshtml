@@ -1,0 +1,50 @@
+﻿@model Login_Signup_withcrud.Models.ahmad
+
+@{
+    ViewBag.Title = "details";
+}
+
+<h2>details</h2>
+
+<div>
+    <h4>emloyeea</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gender)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
